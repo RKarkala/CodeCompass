@@ -35,7 +35,7 @@ var opaaa = 1.0;
 
       Firestore.instance.collection(widget.language).document(widget.id).updateData({ 'response': description,'score': dropDownVal})
           .then((result) => {
-      print(description + "done")
+      Navigator.pop(context)
       });
 
     });
