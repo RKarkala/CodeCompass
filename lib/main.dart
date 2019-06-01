@@ -1,3 +1,4 @@
+import 'package:code_compass/interview.dart';
 import 'package:flutter/material.dart';
 import 'widgets.dart';
 import 'questions.dart';
@@ -27,8 +28,10 @@ class _MyAppState extends State<MyApp> {
           appBar: new GetAppBar(language, callback),
           body: TabBarView(
             children: [
+
+              Interview(),
+
               new Questions(language),
-              Icon(Icons.directions_transit)
             ],
           ),
         ),
