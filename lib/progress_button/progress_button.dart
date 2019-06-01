@@ -75,13 +75,13 @@ class _ProgressButtonState extends State<ProgressButton>
       _state = 1;
     });
 
-    Timer(Duration(milliseconds: 3300), () {
+    Timer(Duration(milliseconds: 1000), () {
       setState(() {
         _state = 2;
       });
     });
 
-    Timer(Duration(milliseconds: 3600), () {
+    Timer(Duration(milliseconds: 1000 ), () {
       _animatingReveal = true;
       widget.callback();
     });

@@ -1,19 +1,20 @@
+import 'package:code_compass/mentor_clicked.dart';
 import 'package:flutter/material.dart';
 import 'interview_clicked.dart';
 
-class GradientBox extends StatefulWidget {
+class GradientBoxMen extends StatefulWidget {
 
 
   @override
-  _GradientBoxState createState() => _GradientBoxState();
+  _GradientBoxStateM createState() => _GradientBoxStateM();
   String question;
   String id;
   String language;
   var ans;
-  GradientBox(this.question, this.id, this.language, this.ans);
+  GradientBoxMen(this.question, this.id, this.language, this.ans);
 }
 
-class _GradientBoxState extends State<GradientBox> {
+class _GradientBoxStateM extends State<GradientBoxMen> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -33,7 +34,7 @@ class _GradientBoxState extends State<GradientBox> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => InterviewClicked(widget.question, widget.id, widget.language,widget.ans)),
+                  MaterialPageRoute(builder: (context) => MentorClicked(widget.question, widget.id, widget.language,widget.ans)),
                 );
               },
               child: Center(

@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class InterviewClicked extends StatefulWidget {
+class MentorClicked extends StatefulWidget {
   var ans;
 
   @override
   State<StatefulWidget> createState() {
-    return _InterviewClicked();
+    return _MentorClicked();
   }
   String id;
   String question;
   String language;
-  InterviewClicked(this.question, this.id, this.language,this.ans);
+  MentorClicked(this.question, this.id, this.language,this.ans);
 }
 
-class _InterviewClicked extends State<InterviewClicked> {
+class _MentorClicked extends State<MentorClicked> {
   String description = '';
   var children = [];
   String done = '';
@@ -25,7 +25,7 @@ var opaaa = 1.0;
   var col = 'Java';
   var doc ='R4qM4MnA9J9bIsYRb6qR';
   var textController = new TextEditingController();
-
+  var dropDownVal = "10/10";
 
 
   callback(newDone) {
@@ -33,7 +33,7 @@ var opaaa = 1.0;
       done = newDone;
       opa = 1.0;
 
-      Firestore.instance.collection(widget.language).document(widget.id).updateData({ 'answer': description})
+      Firestore.instance.collection(widget.language).document(widget.id).updateData({ 'response': description})
           .then((result) => {
       print(description + "done")
       });
@@ -43,7 +43,7 @@ var opaaa = 1.0;
 
   @override
   Widget build(BuildContext context) {
-
+/*
     if(widget.ans!=''){
       textController.text =  widget.ans;
       setState(() {
@@ -51,7 +51,7 @@ var opaaa = 1.0;
         opaaa = 0;
       });
     }
-
+*/
     return MaterialApp(
         home: Scaffold(
       body: SingleChildScrollView(
@@ -64,19 +64,7 @@ var opaaa = 1.0;
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                 )), //use backend to fix
           ),
-          Container(
-              margin: EdgeInsets.only(left: 15, right: 15, top: 5),
-              child: TextField(
-                controller: textController ,
-                decoration: InputDecoration(
-                  labelText: 'Answer',
-                ),
-                maxLines: 4,
-                onChanged: (String value) {
-                  description = value;
-                },
-
-              )),
+        ,
 
       Container(
             margin: EdgeInsets.all(20),
@@ -114,9 +102,39 @@ var opaaa = 1.0;
                     style: TextStyle(color: Colors.grey, fontSize: 15),
                   )
                 ],
-              )) ),
-        ]),
-      ),
-    ));
-  }
+              )), ),  Container(
+    margin: EdgeInsets.only(left: 15, right: 15, top: 5),
+    child: TextField(
+    controller: textController ,
+    decoration: InputDecoration(
+    labelText: 'Give Feedback',
+    ),
+    maxLines: 4,
+    onChanged: (String value) {
+    description = value;
+    },
+
+
+
+    )),
+    DropdownButton<String>(
+    value: "10/10",
+    onChanged: (String newValue) {
+    setState(() {
+    dropDownVal = newValue;
+    });
+    },
+    items: <String>["0/10","1/10","2/10","3/10","4/10","5/10","6/10","7/10","8/10","9/10","10/10"]
+        .map<DropdownMenuItem<String>>((String value) {
+    return DropdownMenuItem<String>(
+    value: value,
+    child: Text(value),
+    );
+    })
+        .toList(),
+    )
+    ])
+    )),
+      );
+     }
 }

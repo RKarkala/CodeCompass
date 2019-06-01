@@ -25,7 +25,7 @@ class _QuestionsState extends State<Questions> {
             itemBuilder: (context, index){
               print('id is ' + snapshot.data.documents[index].documentID);
               return GradientBox(snapshot.data.documents[index]['question'], snapshot.data.documents[index].documentID,
-              widget.language);            
+              widget.language,snapshot.data.documents[index]['answer']);
             },
             
           );
