@@ -47,7 +47,7 @@ class _NeedResponsesState extends State<NeedResponses> {
                       widget.language,
                       snapshot.data.documents[index]['answer']);
                 }else{
-                  return null;
+                  return SizedBox.shrink();
                 }
               },
             ));

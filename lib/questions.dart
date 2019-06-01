@@ -34,14 +34,17 @@ class _QuestionsState extends State<Questions> {
               itemCount: snapshot.data.documents.length,
               itemBuilder: (context, index) {
                 print('id is ' + snapshot.data.documents[index].documentID);
-                if(snapshot.data.documents[index]['answer'] == null || snapshot.data.documents[index]['answer'].length == 0){
+                print('language is ' + widget.language);
+                var cur = snapshot.data.documents[index];
+                if((cur['answer'] == null || cur['answer'].length == 0) &&
+                  (cur['response'] == null || cur['response'].length == 0)){
                 return GradientBox(
-                    snapshot.data.documents[index]['question'],
-                    snapshot.data.documents[index].documentID,
+                    cur['question'],
+                    cur.documentID,
                     widget.language,
-                    snapshot.data.documents[index]['answer']);
+                    cur['answer']);
                 }else{
-                  return null;
+                  return SizedBox.shrink();
                 }
               },
             ));

@@ -15,6 +15,7 @@ class _AnsweredQuestionsState extends State<AnsweredQuestions> {
     return Scaffold(
       body:Column(
         children: <Widget>[
+          
           Container(
             child: Text(
                 "Answered Questions",
@@ -38,7 +39,7 @@ class _AnsweredQuestionsState extends State<AnsweredQuestions> {
                 return GradientBox(snapshot.data.documents[index]['question'], snapshot.data.documents[index].documentID,
                 widget.language, cur['answer']);        
               }else{
-                return null;
+                return SizedBox.shrink();
               }
             },
             
