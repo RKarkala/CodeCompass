@@ -4,6 +4,7 @@ import 'widgets.dart';
 import 'needresponses.dart';
 import 'questions.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'answeredquestions.dart';
 void main() => runApp(MyApp());
 
 
@@ -24,13 +25,14 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: DefaultTabController(
-        length: 2,
+        length: 3,
         child: Scaffold(
           appBar: new GetAppBar(language, callback),
           body: TabBarView(
             children: [
               new Questions(language),
-              new NeedResponses(language)
+              new NeedResponses(language),
+              new AnsweredQuestions(language)
             ],
           ),
         ),
