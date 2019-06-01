@@ -43,6 +43,7 @@ class _GradientBoxStateM extends State<GradientBoxMen> {
                     child: Text(
                       widget.question,
                       style: TextStyle(fontSize: 20.0, color: Colors.white),
+                      textAlign: TextAlign.center,
                     )),
               )),
         ));

@@ -14,33 +14,40 @@ class _QuestionsState extends State<Questions> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: new Column(
-          children: <Widget>[
-            Container(
-              child: Text(
-                "Interview Questions",
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-              ),
-              margin: EdgeInsets.only(left: 20.0, top: 20.0),
-            ),
-            StreamBuilder(
-              stream: Firestore.instance.collection(widget.language).snapshots(),
-              builder: (context, snapshot) {
-                if (!snapshot.hasData) {
-                  return Text('Questions are loading');
+      children: <Widget>[
+        Container(
+          child: Text(
+            "Interview Questions",
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+          ),
+          margin: EdgeInsets.only(left: 20.0, top: 20.0),
+        ),
+        StreamBuilder(
+          stream: Firestore.instance.collection(widget.language).snapshots(),
+          builder: (context, snapshot) {
+            if (!snapshot.hasData) {
+              return Text('Questions are loading');
+            }
+            return Expanded(
+                child: ListView.builder(
+              itemCount: snapshot.data.documents.length,
+              itemBuilder: (context, index) {
+                print('id is ' + snapshot.data.documents[index].documentID);
+                if(snapshot.data.documents[index]['answer'] == null || snapshot.data.documents[index]['answer'].length == 0){
+                return GradientBox(
+                    snapshot.data.documents[index]['question'],
+                    snapshot.data.documents[index].documentID,
+                    widget.language,
+                    snapshot.data.documents[index]['answer']);
+                }else{
+                  return null;
                 }
-                return Expanded(
-                    child: ListView.builder(
-                      itemCount: snapshot.data.documents.length,
-                      itemBuilder: (context, index) {
-                        print('id is ' + snapshot.data.documents[index].documentID);
-                        return GradientBox(snapshot.data.documents[index]['question'],
-                            snapshot.data.documents[index].documentID, widget.language,snapshot.data.documents[index]['answer']);
-                      },
-                    ));
               },
-            ),
-          ],
-        ));
+            ));
+          },
+        ),
+      ],
+    ));
   }
 }

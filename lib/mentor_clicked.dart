@@ -64,8 +64,7 @@ var opaaa = 1.0;
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                 )), //use backend to fix
           ),
-        ,
-
+      
       Container(
             margin: EdgeInsets.all(20),
             child: Opacity(opacity: opaaa,child: RevealProgressButton(done, callback),),
