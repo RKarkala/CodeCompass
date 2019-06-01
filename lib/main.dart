@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'widgets.dart';
+import 'questions.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
           appBar: new GetAppBar(),
           body: TabBarView(
             children: [
-              Icon(Icons.directions_car),
+              new Questions(),
               Icon(Icons.directions_transit)
             ],
           ),
