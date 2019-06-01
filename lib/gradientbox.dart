@@ -6,7 +6,8 @@ class GradientBox extends StatefulWidget {
   _GradientBoxState createState() => _GradientBoxState();
   String question;
   String id;
-  GradientBox(this.question, this.id);
+  String language;
+  GradientBox(this.question, this.id, this.language);
 }
 
 class _GradientBoxState extends State<GradientBox> {
@@ -29,7 +30,7 @@ class _GradientBoxState extends State<GradientBox> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => InterviewClicked(widget.question, widget.id)),
+                  MaterialPageRoute(builder: (context) => InterviewClicked(widget.question, widget.id, widget.language)),
                 );
               },
               child: Center(

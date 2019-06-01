@@ -10,7 +10,8 @@ class InterviewClicked extends StatefulWidget {
   }
   String id;
   String question;
-  InterviewClicked(this.question, this.id);
+  String language;
+  InterviewClicked(this.question, this.id, this.language);
 }
 
 class _InterviewClicked extends State<InterviewClicked> {
@@ -64,7 +65,7 @@ class _InterviewClicked extends State<InterviewClicked> {
 
       Container(
             margin: EdgeInsets.all(20),
-            child: RevealProgressButton(done, callback,col,doc,description),
+            child: RevealProgressButton(done, callback),
           ),
           Opacity(opacity: opa,child:Container(
               decoration: new BoxDecoration(

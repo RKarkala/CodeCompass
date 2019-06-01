@@ -21,10 +21,7 @@ class _Interview extends State<Interview> {
               margin: EdgeInsets.all(10.0),
               child: RaisedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => InterviewClicked()),
-                    );
+                    
                   },
                   child: Text('Interview Question'))),
         ]),
