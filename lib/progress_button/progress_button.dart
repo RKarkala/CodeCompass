@@ -90,7 +90,7 @@ class _ProgressButtonState extends State<ProgressButton>
   Widget buildButtonChild() {
     if (_state == 0) {
       return Text(
-        'Submit for grading',
+        'Submit',
         style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w600),
       );
     } else if (_state == 1) {

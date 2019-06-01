@@ -25,7 +25,7 @@ class _AnsweredQuestionsState extends State<AnsweredQuestions> {
               var cur = snapshot.data.documents[index];
               if(cur['answer']!=null && cur['answer'].length > 0 && cur['response'] != null && cur['response'].length > 0){
                 return GradientBox(snapshot.data.documents[index]['question'], snapshot.data.documents[index].documentID,
-                widget.language);        
+                widget.language,cur['answer']);
               }
             },
             

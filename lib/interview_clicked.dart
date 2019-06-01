@@ -44,13 +44,18 @@ var opaaa = 1.0;
   @override
   Widget build(BuildContext context) {
 
-    if(widget.ans!=''){
-      textController.text =  widget.ans;
-      setState(() {
-        opa = 1.0;
-        opaaa = 0;
-      });
+    if(widget.ans==null ){
+
+    }else{
+      if(widget.ans!=''){
+        textController.text =  widget.ans;
+        setState(() {
+          opa = 1.0;
+          opaaa = 0;
+        });
+      }
     }
+
 
     return MaterialApp(
         home: Scaffold(
