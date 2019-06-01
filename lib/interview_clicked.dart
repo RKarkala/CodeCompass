@@ -8,6 +8,9 @@ class InterviewClicked extends StatefulWidget {
   State<StatefulWidget> createState() {
     return _InterviewClicked();
   }
+  String id;
+  String question;
+  InterviewClicked(this.question, this.id);
 }
 
 class _InterviewClicked extends State<InterviewClicked> {
@@ -43,7 +46,7 @@ class _InterviewClicked extends State<InterviewClicked> {
             child: Container(
                 margin: EdgeInsets.only(top: 35),
                 child: Text(
-                  "Interview question...",
+                  widget.question,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                 )), //use backend to fix
           ),
