@@ -9,13 +9,8 @@ class RevealProgressButton extends StatefulWidget {
 
   var newDone;
 
-  var col;
 
-  var doc;
-
-  var description;
-
-  RevealProgressButton(this.newDone, this.callback,this.col,this.doc,this.description);
+  RevealProgressButton(this.newDone, this.callback);
   @override
   State<StatefulWidget> createState() => _RevealProgressButtonState();
 }

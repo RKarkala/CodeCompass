@@ -28,9 +28,9 @@ class _InterviewClicked extends State<InterviewClicked> {
       done = newDone;
       opa = 1.0;
 
-      Firestore.instance.collection(col).document(col).updateData({ 'answer': description})
+      Firestore.instance.collection(widget.language).document(widget.id).updateData({ 'answer': description})
           .then((result) => {
-      print(description + "done nibba")
+      print(description + "done")
       });
 
     });
@@ -64,7 +64,7 @@ class _InterviewClicked extends State<InterviewClicked> {
 
       Container(
             margin: EdgeInsets.all(20),
-            child: RevealProgressButton(done, callback,col,doc,description),
+            child: RevealProgressButton(done, callback),
           ),
           Opacity(opacity: opa,child:Container(
               decoration: new BoxDecoration(
