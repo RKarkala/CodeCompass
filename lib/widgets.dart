@@ -29,8 +29,11 @@ class _GetAppBarState extends State<GetAppBar> {
               child: DropdownButtonHideUnderline(
                   child: DropdownButton<String>(
                 items: <DropdownMenuItem<String>>[
+                  DropdownMenuItem(child: new Text('Flutter(Dart)', style:TextStyle(fontFamily: 'GoogleSans')), value: 'Flutter(Dart)'),
                   DropdownMenuItem(child: new Text('Java', style: TextStyle(fontFamily: 'GoogleSans'),), value: 'Java'),
                   DropdownMenuItem(child: new Text('Python', style:TextStyle(fontFamily: 'GoogleSans')), value: 'Python'),
+                  DropdownMenuItem(child: new Text('React', style:TextStyle(fontFamily: 'GoogleSans')), value: 'React'),
+  
                 ],
                 hint: Text('Language'),
                 value: newValue,

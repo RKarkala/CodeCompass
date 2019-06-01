@@ -61,6 +61,7 @@ var opaaa = 1.0;
                 margin: EdgeInsets.only(top: 35),
                 child: Text(
                   widget.question,
+                  textAlign: TextAlign.center,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, fontFamily: 'GoogleSans'),
                 )), //use backend to fix
           ),
