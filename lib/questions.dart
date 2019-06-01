@@ -19,7 +19,7 @@ class _QuestionsState extends State<Questions> {
           child: Text(
             "Interview Questions",
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, fontFamily: 'GoogleSans'),
           ),
           margin: EdgeInsets.only(left: 20.0, top: 20.0),
         ),

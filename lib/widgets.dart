@@ -18,9 +18,9 @@ class _GetAppBarState extends State<GetAppBar> {
     return AppBar(
         bottom: TabBar(
           tabs: [
-            Tab(icon: Icon(Icons.directions_car)),
-            Tab(icon: Icon(Icons.directions_transit)),
-            Tab(icon: Icon(Icons.access_time))
+            Tab(icon: Icon(Icons.assignment)),
+            Tab(icon: Icon(Icons.assessment)),
+            Tab(icon: Icon(Icons.person))
           ],
         ),
         title: Align(
@@ -29,8 +29,8 @@ class _GetAppBarState extends State<GetAppBar> {
               child: DropdownButtonHideUnderline(
                   child: DropdownButton<String>(
                 items: <DropdownMenuItem<String>>[
-                  DropdownMenuItem(child: new Text('Java'), value: 'Java'),
-                  DropdownMenuItem(child: new Text('Python'), value: 'Python'),
+                  DropdownMenuItem(child: new Text('Java', style: TextStyle(fontFamily: 'GoogleSans'),), value: 'Java'),
+                  DropdownMenuItem(child: new Text('Python', style:TextStyle(fontFamily: 'GoogleSans')), value: 'Python'),
                 ],
                 hint: Text('Language'),
                 value: newValue,

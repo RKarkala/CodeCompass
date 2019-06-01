@@ -91,7 +91,7 @@ class _ProgressButtonState extends State<ProgressButton>
     if (_state == 0) {
       return Text(
         'Submit',
-        style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w600),
+        style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w600, fontFamily: 'GoogleSans'),
       );
     } else if (_state == 1) {
       return SizedBox(

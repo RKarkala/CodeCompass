@@ -63,7 +63,7 @@ var opaaa = 1.0;
                 child: Text(
                   widget.question,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, fontFamily: 'GoogleSans'),
                 )), //use backend to fix
           ),SizedBox(
             height: 10,
@@ -93,7 +93,7 @@ var opaaa = 1.0;
                       child: Text(
                       "Answer",
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.grey, fontSize: 20),
+                      style: TextStyle(color: Colors.grey, fontSize: 20, fontFamily: 'GoogleSans'),
                       
                     )),
                   
@@ -105,7 +105,7 @@ var opaaa = 1.0;
                     margin: EdgeInsets.only(left: 25.0, right: 25.0),
                     child: Text(
                     widget.ans,
-                    style: TextStyle(color: Colors.grey, fontSize: 15),
+                    style: TextStyle(color: Colors.grey, fontSize: 15, fontFamily: 'GoogleSans'),
                   ))
                 ],
               )), ), SizedBox(
@@ -133,7 +133,7 @@ var opaaa = 1.0;
                       margin: EdgeInsets.all(2),
                       child: Text(
                       "Result",
-                      style: TextStyle(color: Colors.grey, fontSize: 20),
+                      style: TextStyle(color: Colors.grey, fontSize: 20, fontFamily: 'GoogleSans'),
                     )),
                   ),
                   SizedBox(
@@ -144,7 +144,7 @@ var opaaa = 1.0;
                     child: Text(
                     widget.response,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.grey, fontSize: 15),
+                    style: TextStyle(color: Colors.grey, fontSize: 15, fontFamily: 'GoogleSans'),
                   ))
                 ],
               )), ), SizedBox(height: 10,),
@@ -153,7 +153,7 @@ var opaaa = 1.0;
 
         Container(
           margin: EdgeInsets.all(20.0),
-            child: Center(child: Text(widget.score, style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700),),),
+            child: Center(child: Text(widget.score, style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700, fontFamily: 'GoogleSans'),),),
             width: 120,
             height: 50.0,
             decoration: BoxDecoration(gradient: LinearGradient(

@@ -21,7 +21,7 @@ class _AnsweredQuestionsState extends State<AnsweredQuestions> {
             child: Text(
                 "Answered Questions",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, fontFamily: 'GoogleSans'),
               ),
               margin: EdgeInsets.only(left: 20.0, top: 20.0),
           ),

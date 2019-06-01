@@ -61,7 +61,7 @@ var opaaa = 1.0;
                 margin: EdgeInsets.only(top: 35),
                 child: Text(
                   widget.question,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, fontFamily: 'GoogleSans'),
                 )), //use backend to fix
           ),
           Opacity(opacity: opa,child:Container(
@@ -85,7 +85,7 @@ var opaaa = 1.0;
                   Center(
                     child: Text(
                       "Result",
-                      style: TextStyle(color: Colors.grey, fontSize: 20),
+                      style: TextStyle(color: Colors.grey, fontSize: 20, fontFamily: 'GoogleSans'),
                     ),
                   ),
                   SizedBox(
@@ -93,7 +93,7 @@ var opaaa = 1.0;
                   ),
                   Text(
                     widget.ans,
-                    style: TextStyle(color: Colors.grey, fontSize: 15),
+                    style: TextStyle(color: Colors.grey, fontSize: 15, fontFamily: 'GoogleSans'),
                   )
                 ],
               )), ),  Container(
