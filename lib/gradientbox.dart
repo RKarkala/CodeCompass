@@ -34,12 +34,11 @@ class _GradientBoxState extends State<GradientBox> {
                 );
               },
               child: Center(
-                child: Align(
-                    alignment: Alignment.center,
                     child: Text(
                       widget.question,
+                      textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 20.0, color: Colors.white),
-                    )),
+                    ),
               )),
         ));
   }

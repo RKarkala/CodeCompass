@@ -20,6 +20,7 @@ class _GetAppBarState extends State<GetAppBar> {
           tabs: [
             Tab(icon: Icon(Icons.directions_car)),
             Tab(icon: Icon(Icons.directions_transit)),
+            Tab(icon: Icon(Icons.access_time))
           ],
         ),
         title: Align(

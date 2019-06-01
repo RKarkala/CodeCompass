@@ -48,6 +48,7 @@ class _InterviewClicked extends State<InterviewClicked> {
                 margin: EdgeInsets.only(top: 35),
                 child: Text(
                   widget.question,
+                  textAlign: TextAlign.center,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                 )), //use backend to fix
           ),
