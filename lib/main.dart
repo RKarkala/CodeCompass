@@ -1,3 +1,4 @@
+import 'package:code_compass/interview.dart';
 import 'package:flutter/material.dart';
 import 'widgets.dart';
 void main() => runApp(MyApp());
@@ -10,10 +11,11 @@ class MyApp extends StatelessWidget {
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
+
           appBar: new GetAppBar(),
           body: TabBarView(
             children: [
-              Icon(Icons.directions_car),
+              Interview(),
               Icon(Icons.directions_transit)
             ],
           ),
