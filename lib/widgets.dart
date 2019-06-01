@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
+
 class GetAppBar extends StatefulWidget implements PreferredSizeWidget{
   @override
   _GetAppBarState createState() => _GetAppBarState();
   @override
   Size get preferredSize => new Size.fromHeight(kToolbarHeight+20);
+  String language;
+  Function(String) callback;
+  GetAppBar(this.language, this.callback);
 }
 
 class _GetAppBarState extends State<GetAppBar> {
@@ -29,12 +33,12 @@ class _GetAppBarState extends State<GetAppBar> {
                 ],
                 hint: Text('Language'),
                 value: newValue,
+                
                 onChanged: (String value) {
                   newValue = value;
                   setState(() {
-                   newValue;
-                   print(newValue);
                   });
+                  widget.callback(newValue);
                 },
               )),
               data: ThemeData.dark(),
