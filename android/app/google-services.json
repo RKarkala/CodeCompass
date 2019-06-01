@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "77297547220",
+    "firebase_url": "https://codecompass-34443.firebaseio.com",
+    "project_id": "codecompass-34443",
+    "storage_bucket": "codecompass-34443.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77297547220:android:092065c1457a4d8a",
+        "android_client_info": {
+          "package_name": "com.example.code_compass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "77297547220-4oof9lck6b76s24oqn728pma6b7o2n78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB29bUkUXM-sC-N65KOCW_8C6ccMIOytr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "77297547220-4oof9lck6b76s24oqn728pma6b7o2n78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

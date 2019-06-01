@@ -1,6 +1,8 @@
 import 'package:code_compass/interview.dart';
 import 'package:flutter/material.dart';
 import 'widgets.dart';
+import 'questions.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -15,8 +17,10 @@ class MyApp extends StatelessWidget {
           appBar: new GetAppBar(),
           body: TabBarView(
             children: [
+
               Interview(),
-              Icon(Icons.directions_transit)
+
+              new Questions(),
             ],
           ),
         ),
