@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'widgets.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -10,15 +10,7 @@ class MyApp extends StatelessWidget {
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
-          appBar: AppBar(
-            bottom: TabBar(
-              tabs: [
-                Tab(icon: Icon(Icons.directions_car)),
-                Tab(icon: Icon(Icons.directions_transit)),
-              ],
-            ),
-            title: Text('Tabs Demo'),
-          ),
+          appBar: new GetAppBar(),
           body: TabBarView(
             children: [
               Icon(Icons.directions_car),
