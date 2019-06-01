@@ -20,7 +20,7 @@ class _MentorClicked extends State<MentorClicked> {
   String description = '';
   var children = [];
   String done = '';
-  var opa = 0.0;
+  var opa = 1.0;
 var opaaa = 1.0;
   var col = 'Java';
   var doc ='R4qM4MnA9J9bIsYRb6qR';
@@ -33,7 +33,7 @@ var opaaa = 1.0;
       done = newDone;
       opa = 1.0;
 
-      Firestore.instance.collection(widget.language).document(widget.id).updateData({ 'response': description})
+      Firestore.instance.collection(widget.language).document(widget.id).updateData({ 'response': description,'score': dropDownVal})
           .then((result) => {
       print(description + "done")
       });
@@ -64,11 +64,6 @@ var opaaa = 1.0;
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                 )), //use backend to fix
           ),
-      
-      Container(
-            margin: EdgeInsets.all(20),
-            child: Opacity(opacity: opaaa,child: RevealProgressButton(done, callback),),
-          ),
           Opacity(opacity: opa,child:Container(
               decoration: new BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -97,7 +92,7 @@ var opaaa = 1.0;
                     height: 10,
                   ),
                   Text(
-                    "Your results will come soon...",
+                    widget.ans,
                     style: TextStyle(color: Colors.grey, fontSize: 15),
                   )
                 ],
@@ -117,7 +112,7 @@ var opaaa = 1.0;
 
     )),
     DropdownButton<String>(
-    value: "10/10",
+    value: dropDownVal,
     onChanged: (String newValue) {
     setState(() {
     dropDownVal = newValue;
@@ -132,7 +127,12 @@ var opaaa = 1.0;
     })
         .toList(),
     )
-    ])
+          ,
+
+          Container(
+            margin: EdgeInsets.all(20),
+            child: Opacity(opacity: opaaa,child: RevealProgressButton(done, callback),),
+          )])
     )),
       );
      }
