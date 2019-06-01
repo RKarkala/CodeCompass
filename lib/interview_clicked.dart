@@ -1,6 +1,8 @@
 import 'package:code_compass/progress_button/reveal_progress_button.dart';
 import 'package:flutter/material.dart';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class InterviewClicked extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -14,11 +16,20 @@ class _InterviewClicked extends State<InterviewClicked> {
   String done = '';
   var opa = 0.0;
 
+  var col = 'Java';
+  var doc ='R4qM4MnA9J9bIsYRb6qR';
+
+
   callback(newDone) {
     setState(() {
       done = newDone;
       opa = 1.0;
-      print(description);
+
+      Firestore.instance.collection(col).document(col).updateData({ 'answer': description})
+          .then((result) => {
+      print(description + "done nibba")
+      });
+
     });
   }
 
@@ -50,7 +61,7 @@ class _InterviewClicked extends State<InterviewClicked> {
 
       Container(
             margin: EdgeInsets.all(20),
-            child: RevealProgressButton(done, callback),
+            child: RevealProgressButton(done, callback,col,doc,description),
           ),
           Opacity(opacity: opa,child:Container(
               decoration: new BoxDecoration(

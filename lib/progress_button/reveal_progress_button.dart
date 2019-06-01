@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:code_compass/progress_button/progress_button.dart';
 import 'package:code_compass/progress_button/reveal_progress_button_painter.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,13 @@ class RevealProgressButton extends StatefulWidget {
 
   var newDone;
 
-  RevealProgressButton(this.newDone, this.callback);
+  var col;
+
+  var doc;
+
+  var description;
+
+  RevealProgressButton(this.newDone, this.callback,this.col,this.doc,this.description);
   @override
   State<StatefulWidget> createState() => _RevealProgressButtonState();
 }
@@ -21,6 +28,7 @@ class _RevealProgressButtonState extends State<RevealProgressButton>
 
   @override
   Widget build(BuildContext context) {
+
     return CustomPaint(
       child: ProgressButton(reveal),
     );
