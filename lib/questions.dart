@@ -12,6 +12,7 @@ class _QuestionsState extends State<Questions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: StreamBuilder(
         stream: Firestore.instance.collection(widget.language).snapshots(),
         builder: (context, snapshot){
@@ -19,12 +20,13 @@ class _QuestionsState extends State<Questions> {
             return Text('Questions are loading');
           }
           return ListView.builder(
+            
             itemCount: snapshot.data.documents.length,
             itemBuilder: (context, index){
-              print('data');
-              print(snapshot.data.documents[index]['question']);
-              return GradientBox(snapshot.data.documents[index]['question']);
+              print('id is ' + snapshot.data.documents[index].documentID);
+              return GradientBox(snapshot.data.documents[index]['question'], snapshot.data.documents[index].documentID);            
             },
+            
           );
 
         },
