@@ -1,3 +1,4 @@
+import 'package:code_compass/ansgradientbox.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'gradientbox.dart';
@@ -35,8 +36,8 @@ class _AnsweredQuestionsState extends State<AnsweredQuestions> {
             itemBuilder: (context, index){
               var cur = snapshot.data.documents[index];
               if(cur['answer']!=null && cur['answer'].length > 0 && cur['response'] != null && cur['response'].length > 0){
-                return GradientBox(snapshot.data.documents[index]['question'], snapshot.data.documents[index].documentID,
-                widget.language, cur['answer']);        
+                return AnsGradientBox(snapshot.data.documents[index]['question'], snapshot.data.documents[index].documentID,
+                widget.language, cur['answer'],cur['response'],cur['score']);
               }else{
                 return null;
               }
