@@ -1,6 +1,7 @@
 import 'package:code_compass/interview.dart';
 import 'package:flutter/material.dart';
 import 'widgets.dart';
+import 'needresponses.dart';
 import 'questions.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 void main() => runApp(MyApp());
@@ -28,10 +29,8 @@ class _MyAppState extends State<MyApp> {
           appBar: new GetAppBar(language, callback),
           body: TabBarView(
             children: [
-
-              Interview(),
-
               new Questions(language),
+              new NeedResponses(language)
             ],
           ),
         ),
