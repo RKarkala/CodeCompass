@@ -1,16 +1,21 @@
-# code_compass
+# Code Compass
 
-A new Flutter project.
+Interview preparation app that presents curated questions and gives valuable feedback to ensure success in your upcoming interviews
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<img src="https://user-images.githubusercontent.com/36747258/58764002-df6a1180-8527-11e9-96f2-85137b1fca3c.png" alt="MyAllergy Logo" height = "100px" width = "100px" align="right">
 
-A few resources to get you started if this is your first Flutter project:
+Made by:
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+[Darshan Bhatta](https://darshanbhatta.com) |
+[Rohith Karkala](https://github.com/RKarkala)
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+for **International Flutter Hackathon**
+
+## Screenshots
+
+<img src="https://dl3.pushbulletusercontent.com/pCHcMOCPsoL8USN5Eq07ZWrzaKvlJ2Yy/Screenshot_20190602-111709.png" alt="Code Compass" height = "480px" width = "270px" align="center">
+<img src="https://dl3.pushbulletusercontent.com/avsR1giHzAEpqtEOviA9j2HycWXxdvmV/Screenshot_20190602-111718.png" alt="Code Compass" height = "480px" width = "270px" align="center">
+<img src="https://dl3.pushbulletusercontent.com/JVbIj0ktZh7Vp1XwrM0Ugb4Uti9PFMUO/Screenshot_20190602-112726.png" alt="Code Compass" height = "480px" width = "270px" align="center">
+<img src="https://dl3.pushbulletusercontent.com/muC8Rrjn5Mii0C3ZIqY3cyF1ZXcPo4Oo/Screenshot_20190602-111725.png" alt="DormDash Logo" height = "480px" width = "270px" align="center">
+<img src="https://dl3.pushbulletusercontent.com/NsKcDXkaP8XMZGkWQAiNNT4OcNcg4LVc/Screenshot_20190602-111757.png" alt="Code Compass" height = "480px" width = "270px" align="center">
