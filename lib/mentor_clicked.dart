@@ -58,7 +58,7 @@ var opaaa = 1.0;
         child: Column(children: [
           Center(
             child: Container(
-                margin: EdgeInsets.only(top: 35),
+                margin: EdgeInsets.only(top: 35, bottom: 15),
                 child: Text(
                   widget.question,
                   textAlign: TextAlign.center,
@@ -92,10 +92,12 @@ var opaaa = 1.0;
                   SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  Container(
+                    margin: EdgeInsets.only(left: 20, top: 10, right:20),
+                    child: Text(
                     widget.ans,
                     style: TextStyle(color: Colors.grey, fontSize: 15, fontFamily: 'GoogleSans'),
-                  )
+                  ))
                 ],
               )), ),  Container(
     margin: EdgeInsets.only(left: 15, right: 15, top: 5),
