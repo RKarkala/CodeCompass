@@ -12,6 +12,10 @@ Made by:
 
 for **International Flutter Hackathon**
 
+First place regional award
+
+
+
 ## Screenshots
 
 <img src="https://dl3.pushbulletusercontent.com/pCHcMOCPsoL8USN5Eq07ZWrzaKvlJ2Yy/Screenshot_20190602-111709.png" alt="Code Compass" height = "480px" width = "270px" align="center">
